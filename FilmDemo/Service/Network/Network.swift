@@ -13,6 +13,7 @@ let key = "62abf13c"
 
 public enum FlickrNetwork {
     case getFilm(searchText: String)
+    case search(text: String)
 }
 
 extension FlickrNetwork: TargetType {
@@ -24,12 +25,14 @@ extension FlickrNetwork: TargetType {
     public var path: String {
         switch self {
         case .getFilm: return ""
+        case .search: return ""
         }
     }
     
     public var method: Moya.Method {
         switch self {
         case .getFilm: return .get
+        case .search: return .get
         }
     }
     
@@ -42,6 +45,11 @@ extension FlickrNetwork: TargetType {
         case .getFilm(let searchText):
             let param = ["t": searchText,
                          "apikey": key]
+            return .requestParameters(parameters: param, encoding: URLEncoding.default)
+            
+        case .search(let text):
+             let param = ["s": text,
+                          "apikey": key]
             return .requestParameters(parameters: param, encoding: URLEncoding.default)
         }
     }

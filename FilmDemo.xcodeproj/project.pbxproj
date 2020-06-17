@@ -20,6 +20,9 @@
 		1A8BA1EA249967C100F76AE7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BA1E9249967C100F76AE7 /* Network.swift */; };
 		1A8BA1ED2499697900F76AE7 /* FilmListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BA1EC2499697900F76AE7 /* FilmListVM.swift */; };
 		1A8BA1EF24996B0500F76AE7 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BA1EE24996B0500F76AE7 /* SearchModel.swift */; };
+		1A8BA1F6249AA9F400F76AE7 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BA1F5249AA9F400F76AE7 /* MovieModel.swift */; };
+		1AA31A0B249AB0EC0059DBEE /* FilmDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA31A0A249AB0EC0059DBEE /* FilmDetailVM.swift */; };
+		1ABFA892249AB8AA007F2DCB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFA891249AB8AA007F2DCB /* SearchBar.swift */; };
 		48C6D43DF09A172FFBC51C89 /* libPods-FilmDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC179C5175CA2A25118ED285 /* libPods-FilmDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		1A8BA1E9249967C100F76AE7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1A8BA1EC2499697900F76AE7 /* FilmListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListVM.swift; sourceTree = "<group>"; };
 		1A8BA1EE24996B0500F76AE7 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		1A8BA1F5249AA9F400F76AE7 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		1AA31A0A249AB0EC0059DBEE /* FilmDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailVM.swift; sourceTree = "<group>"; };
+		1ABFA891249AB8AA007F2DCB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CAE144E11F1CFC5C4548F236 /* Pods-FilmDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmDemo.debug.xcconfig"; path = "Target Support Files/Pods-FilmDemo/Pods-FilmDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FC179C5175CA2A25118ED285 /* libPods-FilmDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FilmDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,9 +94,9 @@
 		1A394C2024981CA70078E7C3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1AA31A09249AB0CD0059DBEE /* FilmDetail */,
 				1A8BA1EB249968A300F76AE7 /* FilmList */,
 				1A394C10249819760078E7C3 /* BaseViewController.swift */,
-				1A4F59932498240900C356AB /* FilmDetailViewController.swift */,
 				1A4F59952498242C00C356AB /* SplashViewController.swift */,
 			);
 			path = ViewController;
@@ -100,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1A8BA1EE24996B0500F76AE7 /* SearchModel.swift */,
+				1A8BA1F5249AA9F400F76AE7 /* MovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,8 +170,18 @@
 		1A8BA1F224996EC000F76AE7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1ABFA891249AB8AA007F2DCB /* SearchBar.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		1AA31A09249AB0CD0059DBEE /* FilmDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1A4F59932498240900C356AB /* FilmDetailViewController.swift */,
+				1AA31A0A249AB0EC0059DBEE /* FilmDetailVM.swift */,
+			);
+			path = FilmDetail;
 			sourceTree = "<group>";
 		};
 		22A0302A161C38961C068CA0 /* Pods */ = {
@@ -283,12 +300,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A394C11249819760078E7C3 /* BaseViewController.swift in Sources */,
+				1AA31A0B249AB0EC0059DBEE /* FilmDetailVM.swift in Sources */,
 				1A394C0D249819760078E7C3 /* AppDelegate.swift in Sources */,
 				1A8BA1EA249967C100F76AE7 /* Network.swift in Sources */,
 				1A8BA1EF24996B0500F76AE7 /* SearchModel.swift in Sources */,
+				1ABFA892249AB8AA007F2DCB /* SearchBar.swift in Sources */,
 				1A4F5992249823EA00C356AB /* FilmListViewController.swift in Sources */,
 				1A4F59942498240900C356AB /* FilmDetailViewController.swift in Sources */,
 				1A4F599A2498255100C356AB /* FilmTableViewCell.swift in Sources */,
+				1A8BA1F6249AA9F400F76AE7 /* MovieModel.swift in Sources */,
 				1A4F59962498242C00C356AB /* SplashViewController.swift in Sources */,
 				1A8BA1ED2499697900F76AE7 /* FilmListVM.swift in Sources */,
 			);

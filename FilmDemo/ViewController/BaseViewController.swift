@@ -19,7 +19,6 @@ class BaseViewController: UIViewController {
     }
     
     
-    
     func isConnectedToNetwork() -> Bool {
 
         var zeroAddress = sockaddr_in()

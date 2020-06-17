@@ -18,9 +18,10 @@ class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         remoteConfigTitle()
-        changeTitle()
         getRemoteConfigTitle()
         setupUI()
+        changeTitle()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     func remoteConfigTitle(){
@@ -32,7 +33,6 @@ class SplashViewController: BaseViewController {
     func getRemoteConfigTitle(){
         remoteConfig.fetch(withExpirationDuration: 0) { [unowned self]
             (response, error) in
-            self.spinner.stopAnimating()
             guard error == nil else { return }
             print(response)
             remoteConfig.activate()
@@ -41,15 +41,19 @@ class SplashViewController: BaseViewController {
     }
     
     func changeTitle(){
-        spinner.stopAnimating()
         if let text = remoteConfig.configValue(forKey: "splashTitle").stringValue {
-            appTitle.text = text
+            if appTitle.text != text {
+                appTitle.text = text
+                Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(pushMainView), userInfo: nil, repeats: false)
+            }
         }
-        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(pushMainView), userInfo: nil, repeats: false)
     }
     
     @objc func pushMainView(){
-        FilmListViewController.push(from: self)
+        spinner.stopAnimating()
+        if splashBottomTitle.isHidden {
+            FilmListViewController.push(from: self)
+        }
     }
     
     func setupUI(){
@@ -58,9 +62,6 @@ class SplashViewController: BaseViewController {
             splashBottomTitle.isHidden = false
         }
     }
-
-   
-
 }
 
 
