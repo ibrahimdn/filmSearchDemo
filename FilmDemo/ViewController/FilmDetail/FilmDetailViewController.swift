@@ -35,10 +35,21 @@ class FilmDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = movieTitle
+        setupUI()
         loadData(searchText: movieTitle)
     }
     
+    func setupUI(){
+        movieImage.image = UIImage()
+        titleLbl.text = ""
+        rating.text = ""
+        actorsLbl.text = ""
+        releasedDate.text = ""
+        plot.text = ""
+    }
+    
     func loadData(searchText: String){
+        self.view.activityStartAnimating()
         if movieTitle != "" {
             viewModel.getData(searchText: searchText)
         }
@@ -63,6 +74,7 @@ class FilmDetailViewController: BaseViewController {
                                     "releasedDate": data.released ?? ""]
         
         Analytics.logEvent(AnalyticsEventSelectItem, parameters: param)
+        self.view.activityStopAnimating()
     }
 }
 

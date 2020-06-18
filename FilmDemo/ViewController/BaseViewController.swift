@@ -11,16 +11,13 @@ import SystemConfiguration
 
 class BaseViewController: UIViewController {
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         print("\n########## I n i t ###########   [ \(NSStringFromClass(classForCoder)) ]\n")
 
     }
     
-    
     func isConnectedToNetwork() -> Bool {
-
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
         zeroAddress.sin_family = sa_family_t(AF_INET)
@@ -30,7 +27,6 @@ class BaseViewController: UIViewController {
                 SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
             }
         }
-
         var flags = SCNetworkReachabilityFlags()
         if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
             return false
@@ -38,12 +34,11 @@ class BaseViewController: UIViewController {
         let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
         let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
         return (isReachable && !needsConnection)
-
     }
 
     deinit {
          print("\nXXXXXXXXX D e i n i t XXXXXXXX   [ \(NSStringFromClass(classForCoder)) ]\n")
-     }
+    }
     
     func showError(error: Error){
         let alert = UIAlertController(title: "Hata", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)

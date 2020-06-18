@@ -16,6 +16,7 @@
 		1A4F59942498240900C356AB /* FilmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F59932498240900C356AB /* FilmDetailViewController.swift */; };
 		1A4F59962498242C00C356AB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F59952498242C00C356AB /* SplashViewController.swift */; };
 		1A4F599A2498255100C356AB /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F59992498255100C356AB /* FilmTableViewCell.swift */; };
+		1A85B590249C056600B06269 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A85B58F249C056600B06269 /* UiView.swift */; };
 		1A8BA1E72499484B00F76AE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A8BA1E62499484B00F76AE7 /* GoogleService-Info.plist */; };
 		1A8BA1EA249967C100F76AE7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BA1E9249967C100F76AE7 /* Network.swift */; };
 		1A8BA1ED2499697900F76AE7 /* FilmListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8BA1EC2499697900F76AE7 /* FilmListVM.swift */; };
@@ -39,6 +40,7 @@
 		1A4F59932498240900C356AB /* FilmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewController.swift; sourceTree = "<group>"; };
 		1A4F59952498242C00C356AB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		1A4F59992498255100C356AB /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		1A85B58F249C056600B06269 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
 		1A8BA1E62499484B00F76AE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A8BA1E9249967C100F76AE7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1A8BA1EC2499697900F76AE7 /* FilmListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListVM.swift; sourceTree = "<group>"; };
@@ -94,6 +96,8 @@
 		1A394C2024981CA70078E7C3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1A394C12249819760078E7C3 /* Main.storyboard */,
+				1A394C172498197B0078E7C3 /* LaunchScreen.storyboard */,
 				1AA31A09249AB0CD0059DBEE /* FilmDetail */,
 				1A8BA1EB249968A300F76AE7 /* FilmList */,
 				1A394C10249819760078E7C3 /* BaseViewController.swift */,
@@ -124,9 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				1A394C0C249819760078E7C3 /* AppDelegate.swift */,
-				1A394C12249819760078E7C3 /* Main.storyboard */,
 				1A394C152498197B0078E7C3 /* Assets.xcassets */,
-				1A394C172498197B0078E7C3 /* LaunchScreen.storyboard */,
 				1A394C1A2498197B0078E7C3 /* Info.plist */,
 				1A8BA1E62499484B00F76AE7 /* GoogleService-Info.plist */,
 			);
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				1ABFA891249AB8AA007F2DCB /* SearchBar.swift */,
+				1A85B58F249C056600B06269 /* UiView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				1ABFA892249AB8AA007F2DCB /* SearchBar.swift in Sources */,
 				1A4F5992249823EA00C356AB /* FilmListViewController.swift in Sources */,
 				1A4F59942498240900C356AB /* FilmDetailViewController.swift in Sources */,
+				1A85B590249C056600B06269 /* UiView.swift in Sources */,
 				1A4F599A2498255100C356AB /* FilmTableViewCell.swift in Sources */,
 				1A8BA1F6249AA9F400F76AE7 /* MovieModel.swift in Sources */,
 				1A4F59962498242C00C356AB /* SplashViewController.swift in Sources */,

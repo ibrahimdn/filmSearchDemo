@@ -58,11 +58,10 @@ extension FilmListViewController: UITableViewDataSource, UITableViewDelegate{
             cell.item = element
         }else{
             if searchBar.textField?.text?.isEmpty ?? false {
-                cell.filmTitle.text = "Aradığınız film bulunamadı."
+                cell.emptyItem = "Aradığınız film bulunamadı."
             }else{
-                cell.filmTitle.text = "'\(searchBar.searchTextField.text ?? "")' bulunamadı."
+                cell.emptyItem = "'\(searchBar.searchTextField.text ?? "")' bulunamadı."
             }
-            cell.filmImage.image = UIImage()
         }
         return cell
     }
@@ -78,6 +77,7 @@ extension FilmListViewController: UITableViewDataSource, UITableViewDelegate{
 extension FilmListViewController: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.view.activityStartAnimating()
         searchBar.isLoading = true
         loadData(searchText: searchText)
     }
@@ -86,6 +86,7 @@ extension FilmListViewController: UISearchBarDelegate {
 extension FilmListViewController: FilmListVMDelegate {
     func completed(response: SearchModel) {
         searchBar.isLoading = false
+        self.view.activityStopAnimating()
         searchData = response
         isFirstLogin = false
         tableView.reloadData()
