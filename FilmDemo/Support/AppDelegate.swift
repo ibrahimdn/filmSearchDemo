@@ -10,9 +10,9 @@ import UIKit
 import Firebase
 
 var remoteConfig = RemoteConfig.remoteConfig()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
 
     var window: UIWindow?
 
@@ -20,7 +20,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         return true
     }
-
-
 
 }

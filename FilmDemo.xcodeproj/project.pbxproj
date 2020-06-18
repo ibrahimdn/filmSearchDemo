@@ -96,12 +96,11 @@
 		1A394C2024981CA70078E7C3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1A394C12249819760078E7C3 /* Main.storyboard */,
-				1A394C172498197B0078E7C3 /* LaunchScreen.storyboard */,
+				1A85B592249C113900B06269 /* Inherited */,
 				1AA31A09249AB0CD0059DBEE /* FilmDetail */,
 				1A8BA1EB249968A300F76AE7 /* FilmList */,
-				1A394C10249819760078E7C3 /* BaseViewController.swift */,
-				1A4F59952498242C00C356AB /* SplashViewController.swift */,
+				1A394C12249819760078E7C3 /* Main.storyboard */,
+				1A394C172498197B0078E7C3 /* LaunchScreen.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -150,6 +149,15 @@
 				1A4F59992498255100C356AB /* FilmTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1A85B592249C113900B06269 /* Inherited */ = {
+			isa = PBXGroup;
+			children = (
+				1A394C10249819760078E7C3 /* BaseViewController.swift */,
+				1A4F59952498242C00C356AB /* SplashViewController.swift */,
+			);
+			path = Inherited;
 			sourceTree = "<group>";
 		};
 		1A8BA1E8249967AB00F76AE7 /* Network */ = {

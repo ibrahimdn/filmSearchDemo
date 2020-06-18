@@ -25,18 +25,18 @@ class FilmDetailViewController: BaseViewController {
         return vm
     }()
     
-    static func push(from: UIViewController, title: String) {
-        if let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FilmDetailViewController") as? FilmDetailViewController {
-            view.movieTitle = title
-            from.navigationController?.pushViewController(view, animated: true)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = movieTitle
         setupUI()
         loadData(searchText: movieTitle)
+    }
+    
+    static func push(from: UIViewController, title: String) {
+        if let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FilmDetailViewController") as? FilmDetailViewController {
+            view.movieTitle = title
+            from.navigationController?.pushViewController(view, animated: true)
+        }
     }
     
     func setupUI(){

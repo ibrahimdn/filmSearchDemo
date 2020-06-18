@@ -14,7 +14,6 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("\n########## I n i t ###########   [ \(NSStringFromClass(classForCoder)) ]\n")
-
     }
     
     func isConnectedToNetwork() -> Bool {
@@ -45,7 +44,6 @@ class BaseViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
 
 }
 

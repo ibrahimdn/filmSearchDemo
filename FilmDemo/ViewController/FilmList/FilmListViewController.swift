@@ -93,6 +93,8 @@ extension FilmListViewController: FilmListVMDelegate {
     }
  
     func error(error: Error) {
+        searchBar.isLoading = false
+        self.view.activityStopAnimating()
         showError(error: error)
     }
 }
